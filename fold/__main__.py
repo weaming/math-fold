@@ -1,10 +1,9 @@
 import sys
-from decimal import Decimal
-from . import cal_list, arithmatic_mapping, bool_mapping
+from . import cal_list, arithmatic_mapping
 
 
 def to_number(x):
-    return Decimal(x)
+    return float(x)
 
 
 def get_stdin():
@@ -18,7 +17,7 @@ def main():
     parser.add_argument(
         "notation",
         help="the math symbol. choices are {{}}".format(
-            ", ".join(set(arithmatic_mapping) | set(bool_mapping))
+            ", ".join(list(arithmatic_mapping))
         ),
     )
     args = parser.parse_args()
