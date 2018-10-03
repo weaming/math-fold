@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "notation",
-        help="the math symbol. choices are {{}}".format(
+        help="The math symbol. Choices are {}. Also support lambda in Python.".format(
             ", ".join(list(arithmatic_mapping))
         ),
     )
