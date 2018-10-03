@@ -23,6 +23,8 @@ def get_lambda(notation):
         return arithmatic_mapping[notation]
     if notation in bool_mapping:
         return bool_mapping[notation]
+    if notation.starswith('lambda'):
+        return eval(notation)
     raise Exception("unknown notation {}".format(notation))
 
 
